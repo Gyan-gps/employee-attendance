@@ -1,0 +1,12 @@
+.navbar{
+  background-color: rgb(104, 213, 104);
+  padding: 10px;
+}
+a{
+  padding-left: 12%;
+  padding-right: 12;
+  font-size: 25px;
+  text-decoration: none;
+  font-family:'Arial Narrow Bold', sans-serif;
+
+}

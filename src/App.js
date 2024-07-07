@@ -3,6 +3,7 @@ import './App.css';
 import LoginPage from './pages/LoginPage';
 import Attendance from './pages/Attendance';
 import EmployeeDetails from './pages/EmployeeDetails';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Route path='/' element={<LoginPage />}/>
         <Route path='/attendance' element={<Attendance />}/>
         <Route path='/employee-details' element={<EmployeeDetails />}/>
+        <Route path='/contact-us' element={<ContactUs />}/>
+        <Route path='login/logout' element={<LoginPage />}/>
       </Routes>
     </div>
   );
