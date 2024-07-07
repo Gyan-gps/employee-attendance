@@ -2,6 +2,9 @@ import React from 'react'
 import Calendar from 'calendar-reactjs'
 import './index.css'
 
+
+new Date().getMonth();
+
 function getFullMonth(){
     let month = new Date().getMonth() + 1;
     let year = new Date().getFullYear();
@@ -18,7 +21,6 @@ function getFullMonth(){
     return fullMonth;
 }
 export default function Calender() {
-    console.log("sdfghjklkbhvbjk",new Date().getFullYear())
     return (
         <div className='calender'>
             <Calendar
