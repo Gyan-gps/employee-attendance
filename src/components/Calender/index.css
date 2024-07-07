@@ -1,0 +1,6 @@
+.calender table{
+    width: 100%;
+}
+.calender table td{
+    max-height: 100px !important;
+}
