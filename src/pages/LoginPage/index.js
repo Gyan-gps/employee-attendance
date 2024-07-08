@@ -20,12 +20,18 @@ function LoginPage() {
         setLoginDetails({ ...loginDetails, [name]: value })
     }
     const handleLogin = () => {
-        if (!loginDetails.userName || !loginDetails.password) return;
+        console.log("sdfghjklkbhvbjk",loginDetails)
+        if (!loginDetails.userName || !loginDetails.password || !loginDetails.type) return;
         localStorage.setItem("cred", JSON.stringify(loginDetails))
         router("/attendance");
     }
     return (
         <div>
+            <select name="type" onChange={handleChange}>
+                <option value="">Select type</option>
+                <option value="employee">Employee</option>
+                <option value="manager">Manager</option>
+            </select>
             <input type='text' name='userName' value={loginDetails.userName} onChange={handleChange} />
             <input type="password" name="password" value={loginDetails.password} onChange={handleChange} />
             <button onClick={handleLogin}>Login</button>

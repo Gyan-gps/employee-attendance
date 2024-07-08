@@ -5,6 +5,7 @@ import Attendance from './pages/Attendance';
 import EmployeeDetails from './pages/EmployeeDetails';
 import ContactUs from './pages/ContactUs';
 import CreateEmployee from './pages/CreateEmployee';
+import EpmloyeeList from './pages/EmployeesList';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/contact-us' element={<ContactUs />}/>
         <Route path='login/logout' element={<LoginPage />}/>
         <Route path='create-employee' element={<CreateEmployee />} />
+        <Route path='employees' element={<EpmloyeeList />} />
       </Routes>
     </div>
   );
