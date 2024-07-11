@@ -11,15 +11,15 @@ export default function TopNavbar() {
 
     return (
         <div className="navbar">
-            <a href='attendance'>Logo</a>
-            <a href='attendance'>Attendance</a>
-            <a href='employee-details'>Details</a>
+            <a href='/attendance'>Logo</a>
+            <a href='/attendance'>Attendance</a>
+            <a href='/employee-details'>Details</a>
             {
                 user.type == "manager" && <a href="/employees">Employees</a>
             }
-            <a href='contact-us'>Contact Us</a>
+            <a href='/contact-us'>Contact Us</a>
             {
-                user.type == "manager" && <a href='create-employee'>Create Employee</a>
+                user.type == "manager" && <a href='/create-employee'>Create Employee</a>
             }
             <a href='/' onClick={handleLogout}>Logout</a>
         </div>

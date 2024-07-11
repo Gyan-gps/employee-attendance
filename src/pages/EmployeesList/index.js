@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import TopNavbar from '../../components/TopNavbar'
 import './index.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function EpmloyeeList() {
 
     const [employeeList, setEmployeeList] = useState(JSON.parse(localStorage.getItem("employees")));
+
+    const router = useNavigate();
 
     const handleDelete = (index)=>{
         let newArray = employeeList.filter((prev, i)=> i != index);
@@ -12,6 +15,11 @@ export default function EpmloyeeList() {
         localStorage.setItem("employees",JSON.stringify(newArray));
         setEmployeeList(newArray);
     }
+
+    const handleUpdate = (userName) =>{
+        router('/edit-employee/'+userName);
+    }
+
   return (
     <div className='employee-list'>
         <TopNavbar/>
@@ -40,7 +48,7 @@ export default function EpmloyeeList() {
                             <td>{data.workingLocation}</td>
                             <td>
                                 <button onClick={()=>handleDelete(index)}>Delete</button>
-                                <button>Update</button>
+                                <button onClick={()=>handleUpdate(data.userName)}>Update</button>
                             </td>
                         </tr>
                     ))

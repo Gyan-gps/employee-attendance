@@ -7,6 +7,7 @@ function LoginPage() {
     })
 
     const user = localStorage.getItem("cred");
+    const router = useNavigate();
 
     useEffect(() => {
         if (user) {
@@ -14,7 +15,6 @@ function LoginPage() {
         }
     }, [user]);
 
-    const router = useNavigate();
     const handleChange = (e) => {
         const { name, value } = e.target;
         setLoginDetails({ ...loginDetails, [name]: value })
