@@ -4,7 +4,6 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { useState } from "react";
 import { Button, FormControl, InputLabel, Menu, MenuItem, Select } from "@mui/material";
-import RenderEvent from "./RenderEventContent";
 // function getFullMonth() {
 //     let month = new Date().getMonth() + 1;
 //     let year = new Date().getFullYear();
